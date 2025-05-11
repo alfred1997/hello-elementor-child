@@ -1,11 +1,11 @@
 <?php
-// این فایل برای ارائه فایل ZIP جدید استفاده می‌شود
-$plugin = isset($_GET['theme']) ? $_GET['theme'] : '';
+// این فایل برای ارائه فایل ZIP جدید قالب استفاده می‌شود
+$template = isset($_GET['template']) ? $_GET['template'] : '';
 
-// بررسی درخواست پلاگین
-if ($plugin === 'hello-elementor-child/functions.php') {
-    // مسیر فایل ZIP نسخه جدید
-    $file_path = __DIR__ . '/files/hello-elementor-child-1.1.1.zip';
+// بررسی درخواست قالب
+if ($template === 'hello-elementor-child/functions.php') {
+    // مسیر فایل ZIP نسخه جدید قالب
+    $file_path = __DIR__ . '/files/my-theme-1.0.2.zip';
     
     // بررسی وجود فایل
     if (file_exists($file_path)) {
@@ -26,8 +26,8 @@ if ($plugin === 'hello-elementor-child/functions.php') {
         echo 'فایل بروزرسانی یافت نشد.';
     }
 } else {
-    // پلاگین نامعتبر
+    // قالب نامعتبر
     http_response_code(400);
     echo 'درخواست نامعتبر است.';
 }
-?> 
+?>
