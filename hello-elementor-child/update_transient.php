@@ -6,7 +6,7 @@ function my_custom_theme_update_check($transient) {
     }
 
     // اطلاعات قالب فعلی
-    $theme_slug = 'hello-elementor-child'; // نام پوشه قالب
+    $theme_slug = 'hello-elementor-child';  
     $current_version = wp_get_theme($theme_slug)->get('Version');
 
     // آدرس سرور به‌روزرسانی
@@ -21,7 +21,7 @@ function my_custom_theme_update_check($transient) {
             $transient->response[$theme_slug] = [
                 'theme'       => $theme_slug,
                 'new_version' => $data['version'],
-                'url'         => 'https://your-server.com', // اختیاری
+                'url'         => 'https://your-server.com',  
                 'package'     => $data['download_url'],
             ];
         }
