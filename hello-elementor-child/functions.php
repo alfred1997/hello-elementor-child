@@ -9,6 +9,8 @@
  *
  * @package HelloElementorChild
  */
+require_once plugin_dir_path(__FILE__) . 'updater.php';
+
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
